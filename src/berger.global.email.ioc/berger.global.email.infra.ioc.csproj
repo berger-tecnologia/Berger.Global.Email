@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\berger.global.email.application\berger.global.email.application.csproj" />
+    <ProjectReference Include="..\berger.global.email.domain\berger.global.email.domain.csproj" />
+    <ProjectReference Include="..\berger.global.email.infra\berger.global.email.infra.csproj" />
+  </ItemGroup>
+
+</Project>

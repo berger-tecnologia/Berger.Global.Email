@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Company>Berger Information Technology</Company>
+    <Description>Our common email library</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\berger.global.email.domain\berger.global.email.domain.csproj" />
+    <ProjectReference Include="..\berger.global.email.infra\berger.global.email.infra.csproj" />
+  </ItemGroup>
+
+</Project>
