@@ -9,10 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Domain", "02 - Domain"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - CrossCutting", "03 - CrossCutting", "{2DF7D4BA-E963-47C4-917D-503C987D49ED}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07 - Temporario", "07 - Temporario", "{49AC860D-3451-4572-973A-D2C19DD5B586}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "brg.common.extensions", "brg.common.extensions\src\brg.common.extensions\brg.common.extensions.csproj", "{4B1C662C-91BA-482C-BF68-C88EC19450BA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infra", "04 - Infra", "{99DAD4E6-885C-453A-B6F7-062C66C32AB3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "berger.global.email.application", "berger.global.email.application\berger.global.email.application.csproj", "{11BB0FEB-60EA-4F87-9FD6-DE9B2FCB4F0F}"
@@ -29,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4B1C662C-91BA-482C-BF68-C88EC19450BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B1C662C-91BA-482C-BF68-C88EC19450BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B1C662C-91BA-482C-BF68-C88EC19450BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B1C662C-91BA-482C-BF68-C88EC19450BA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11BB0FEB-60EA-4F87-9FD6-DE9B2FCB4F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11BB0FEB-60EA-4F87-9FD6-DE9B2FCB4F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11BB0FEB-60EA-4F87-9FD6-DE9B2FCB4F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,7 +46,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4B1C662C-91BA-482C-BF68-C88EC19450BA} = {49AC860D-3451-4572-973A-D2C19DD5B586}
 		{11BB0FEB-60EA-4F87-9FD6-DE9B2FCB4F0F} = {80C6713C-1561-4EC7-8B8E-32E97B8248B4}
 		{EEFADE51-D855-4EE0-BAC0-D1C987FBE573} = {3AABAD73-6ABF-4862-9562-1566B72109A0}
 		{7E386AFF-864B-4926-AA27-70D5162AD8E2} = {2DF7D4BA-E963-47C4-917D-503C987D49ED}
