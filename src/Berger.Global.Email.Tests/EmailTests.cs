@@ -27,14 +27,7 @@ namespace Berger.Global.Email.Tests
 
         private Smtp CreateSmtp(string userEmail, string password, string host)
         {
-            return new Smtp
-            {
-                User = userEmail,
-                Password = password,
-                Host = host,
-                Port = 587,
-                EnableSsl = true
-            };
+            return new Smtp(userEmail, password, host, 587, true);
         }
         private Message CreateTextMessage(string recipient, string subject = "", string body = "")
         {
