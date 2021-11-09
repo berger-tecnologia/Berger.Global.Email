@@ -33,11 +33,12 @@ namespace Berger.Global.Body.Services
             if (message.MessageType == MessageType.Html)
             {
                 _message.IsBodyHtml = true;
-                body = GetTemplate(message.TemplateUrl, message.Data);
+
+                body = GetTemplate(message);
             }
             else
                 body = message.Body;
-            
+
             if (!string.IsNullOrEmpty(alias))
                 _message.From = new MailAddress(credential.User, alias);
             else
@@ -54,17 +55,20 @@ namespace Berger.Global.Body.Services
             _client.Credentials = new NetworkCredential(credential.User, credential.Password);
         }
 
-        private string GetTemplate(string url, List<KeyValuePair<string, string>> data)
+        private string GetTemplate(Message message)
         {
             var html = string.Empty;
 
             using (WebClient client = new WebClient())
             {
-                html = client.DownloadString(url);
+                html = client.DownloadString(message.TemplateUrl);
 
-                foreach (KeyValuePair<string, string> dictionary in data)
+                if (message.Data != null)
                 {
-                    html = html.Replace(dictionary.Key, dictionary.Value);
+                    foreach (KeyValuePair<string, string> dictionary in message.Data)
+                    {
+                        html = html.Replace(dictionary.Key, dictionary.Value);
+                    }
                 }
             }
 
