@@ -1,7 +1,6 @@
 ﻿using System.Net;
 using System.Net.Mail;
 using Berger.Global.Email.Models;
-using System.Collections.Generic;
 
 namespace Berger.Global.Body.Services
 {
