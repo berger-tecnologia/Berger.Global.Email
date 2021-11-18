@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Net.Mail;
-using System.Collections.Generic;
 using Berger.Global.Email.Models;
+using System.Collections.Generic;
 
 namespace Berger.Global.Body.Services
 {
@@ -10,21 +10,21 @@ namespace Berger.Global.Body.Services
         private SmtpClient _client;
         private MailMessage _message;
 
-        public void Send(Message message, Smtp credential)
+        public void Send(Message message, Smtp smtp)
         {
-            Prepare(message, credential);
+            Prepare(message, smtp);
 
             _client.Send(_message);
         }
 
-        public void Send(Message message, Smtp credential, string alias)
+        public void Send(Message message, Smtp smtp, string alias)
         {
-            Prepare(message, credential, alias);
+            Prepare(message, smtp, alias);
 
             _client.Send(_message);
         }
 
-        private void Prepare(Message message, Smtp credential, string alias = "")
+        private void Prepare(Message message, Smtp smtp, string alias = "")
         {
             var body = string.Empty;
 
@@ -40,19 +40,19 @@ namespace Berger.Global.Body.Services
                 body = message.Body;
 
             if (!string.IsNullOrEmpty(alias))
-                _message.From = new MailAddress(credential.User, alias);
+                _message.From = new MailAddress(smtp.User, alias);
             else
-                _message.From = new MailAddress(credential.User);
+                _message.From = new MailAddress(smtp.User);
 
             _message.Body = body;
             _message.To.Add(message.Recipient);
             _message.Subject = message.Subject;
 
-            _client = new SmtpClient(credential.Host, credential.Port);
+            _client = new SmtpClient(smtp.Host, smtp.Port);
 
             _client.UseDefaultCredentials = false;
-            _client.EnableSsl = credential.EnableSsl;
-            _client.Credentials = new NetworkCredential(credential.User, credential.Password);
+            _client.EnableSsl = smtp.EnableSsl;
+            _client.Credentials = new NetworkCredential(smtp.User, smtp.Password);
         }
 
         private string GetTemplate(Message message)
