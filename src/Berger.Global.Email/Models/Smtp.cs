@@ -1,10 +1,11 @@
-﻿using System;
-
-namespace Berger.Global.Email.Models
+﻿namespace Berger.Global.Email.Models
 {
     public class Smtp
     {
         #region Constructors
+        public Smtp()
+        {
+        }
         public Smtp(string user, string password, string host, int port, bool ssl = true)
         {
             User = user;
