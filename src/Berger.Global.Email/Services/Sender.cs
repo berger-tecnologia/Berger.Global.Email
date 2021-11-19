@@ -2,7 +2,7 @@
 using System.Net.Mail;
 using Berger.Global.Email.Models;
 
-namespace Berger.Global.Body.Services
+namespace Berger.Global.Email.Services
 {
     public class Sender
     {
