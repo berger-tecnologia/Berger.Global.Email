@@ -1,28 +1,29 @@
 ﻿using System.Net;
 using System.Net.Mail;
-using Berger.Global.Email.Models;
+using Berger.Extensions.Email.Models;
 
-namespace Berger.Global.Email.Services
+namespace Berger.Extensions.Email.Services
 {
     public class Sender
     {
+        #region Properties
         private SmtpClient _client;
         private MailMessage _message;
+        #endregion
 
+        #region Methods
         public void Send(Message message, Smtp smtp)
         {
             Prepare(message, smtp);
 
             _client.Send(_message);
         }
-
         public void Send(Message message, Smtp smtp, string alias)
         {
             Prepare(message, smtp, alias);
 
             _client.Send(_message);
         }
-
         private void Prepare(Message message, Smtp smtp, string alias = "")
         {
             var body = string.Empty;
@@ -53,7 +54,6 @@ namespace Berger.Global.Email.Services
             _client.EnableSsl = smtp.EnableSsl;
             _client.Credentials = new NetworkCredential(smtp.User, smtp.Password);
         }
-
         private string GetTemplate(Message message)
         {
             var html = string.Empty;
@@ -73,5 +73,6 @@ namespace Berger.Global.Email.Services
 
             return html;
         }
+        #endregion
     }
 }

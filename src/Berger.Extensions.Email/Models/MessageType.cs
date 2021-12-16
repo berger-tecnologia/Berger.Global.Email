@@ -1,4 +1,4 @@
-﻿namespace Berger.Global.Email.Models
+﻿namespace Berger.Extensions.Email.Models
 {
     public enum MessageType
     {
