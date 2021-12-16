@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Berger.Global.Email.Models;
+using Berger.Extensions.Email.Models;
 
-namespace Berger.Global.Email.Models
+namespace Berger.Extensions.Email.Models
 {
     public class Message
     {

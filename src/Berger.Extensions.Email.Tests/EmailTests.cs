@@ -1,8 +1,8 @@
 using NUnit.Framework;
-using Berger.Global.Email.Models;
-using Berger.Global.Body.Services;
+using Berger.Extensions.Email.Models;
+using Berger.Extensions.Email.Services;
 
-namespace Berger.Global.Email.Tests
+namespace Berger.Extensions.Email.Tests
 {
     public class Tests
     {

@@ -1,4 +1,4 @@
-﻿namespace Berger.Global.Email.Models
+﻿namespace Berger.Extensions.Email.Models
 {
     public class Smtp
     {
@@ -14,7 +14,6 @@
             Port = port;
             EnableSsl = ssl;
         }
-
         public Smtp(string user, string password, string alias, string host, int port, bool ssl = true)
         {
             User = user;
