@@ -1,6 +1,4 @@
 using NUnit.Framework;
-using Berger.Extensions.Email.Models;
-using Berger.Extensions.Email.Services;
 
 namespace Berger.Extensions.Email.Tests
 {
