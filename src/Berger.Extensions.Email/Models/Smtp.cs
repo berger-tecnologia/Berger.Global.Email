@@ -1,4 +1,4 @@
-﻿namespace Berger.Extensions.Email.Models
+﻿namespace Berger.Extensions.Email
 {
     public class Smtp
     {

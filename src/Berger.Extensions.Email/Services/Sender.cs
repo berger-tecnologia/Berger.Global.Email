@@ -1,8 +1,7 @@
 ﻿using System.Net;
 using System.Net.Mail;
-using Berger.Extensions.Email.Models;
 
-namespace Berger.Extensions.Email.Services
+namespace Berger.Extensions.Email
 {
     public class Sender
     {
@@ -56,6 +55,9 @@ namespace Berger.Extensions.Email.Services
         }
         private string GetTemplate(Message message)
         {
+            if (string.IsNullOrEmpty(message.TemplateUrl))
+                return string.Empty;
+
             var html = string.Empty;
 
             using (WebClient client = new WebClient())
