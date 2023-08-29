@@ -1,1 +1,1 @@
-# Berger.Global.Email
+# Berger.Extensions.Email
