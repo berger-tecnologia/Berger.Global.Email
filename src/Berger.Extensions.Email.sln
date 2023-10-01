@@ -5,7 +5,16 @@ VisualStudioVersion = 17.1.31903.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Berger.Extensions.Email.Tests", "Berger.Extensions.Email.Tests\Berger.Extensions.Email.Tests.csproj", "{5053757D-51CE-462F-BBD7-5A8D32E8C3B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Berger.Extensions.Email", "Berger.Extensions.Email\Berger.Extensions.Email.csproj", "{5A8D4A54-47B3-4B7B-988B-C654E86F5E54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Berger.Extensions.Email", "Berger.Extensions.Email\Berger.Extensions.Email.csproj", "{5A8D4A54-47B3-4B7B-988B-C654E86F5E54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{031B20D9-0BB3-406B-88C7-ED29EA8278CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{DD7FC5E8-59F3-4B64-AAB5-65B012DFFD64}"
+	ProjectSection(SolutionItems) = preProject
+		..\build\Berger.Extensions.Email.yml = ..\build\Berger.Extensions.Email.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{555B6B34-9B24-43E9-AC18-BB779088648B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +33,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5053757D-51CE-462F-BBD7-5A8D32E8C3B4} = {555B6B34-9B24-43E9-AC18-BB779088648B}
+		{5A8D4A54-47B3-4B7B-988B-C654E86F5E54} = {031B20D9-0BB3-406B-88C7-ED29EA8278CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A3DB37B-729A-4C48-948A-CA208B0119FE}
