@@ -47,11 +47,12 @@ namespace Berger.Extensions.Email
             _message.To.Add(message.Recipient);
             _message.Subject = message.Subject;
 
-            _client = new SmtpClient(smtp.Host, smtp.Port);
-
-            _client.UseDefaultCredentials = false;
-            _client.EnableSsl = smtp.EnableSsl;
-            _client.Credentials = new NetworkCredential(smtp.User, smtp.Password);
+            _client = new SmtpClient(smtp.Host, smtp.Port)
+            {
+                UseDefaultCredentials = false,
+                EnableSsl = smtp.EnableSsl,
+                Credentials = new NetworkCredential(smtp.User, smtp.Password)
+            };
         }
         private string GetTemplate(Message message)
         {
