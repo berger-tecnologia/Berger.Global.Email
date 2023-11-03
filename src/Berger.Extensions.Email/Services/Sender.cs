@@ -25,10 +25,9 @@ namespace Berger.Extensions.Email
         }
         private void Prepare(Message message, Smtp smtp, string alias = "")
         {
-            var body = string.Empty;
-
             _message = new MailMessage();
 
+            string body;
             if (message.MessageType == MessageType.Html)
             {
                 _message.IsBodyHtml = true;
@@ -54,14 +53,14 @@ namespace Berger.Extensions.Email
                 Credentials = new NetworkCredential(smtp.User, smtp.Password)
             };
         }
-        private string GetTemplate(Message message)
+        private static string GetTemplate(Message message)
         {
             if (string.IsNullOrEmpty(message.TemplateUrl))
                 return string.Empty;
 
             var html = string.Empty;
 
-            using (WebClient client = new WebClient())
+            using (WebClient client = new())
             {
                 html = client.DownloadString(message.TemplateUrl);
 
