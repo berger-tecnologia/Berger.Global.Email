@@ -2,10 +2,10 @@
 
 namespace Berger.Extensions.Email
 {
-    public class Message : IMessage<MessageType>
+    public class Message : BaseEntity, IMessage<MessageType>
     {
         #region Properties
-        public MessageType MessageType { get; private set; }
+        public MessageType MessageType { get; set; }
         public Guid? PhoneID { get; set; }
         public Guid PlatformID { get; set; }
         public Guid? CultureID { get; set; }
@@ -16,7 +16,7 @@ namespace Berger.Extensions.Email
         public string TemplateUrl { get; set; } = string.Empty;
         public List<KeyValuePair<string, string>> Data { get; set; }
         public string Content { get; set; } = string.Empty;
-        public bool Simulation { get; set; } = false;        
+        public bool Simulation { get; set; } = false;
         #endregion
     }
 }
