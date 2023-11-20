@@ -31,7 +31,7 @@
         public string Alias { get; set; } = string.Empty;
         public string Host { get; set; } = string.Empty;
         public int Port { get; set; }
-        public bool EnableSsl { get; set; }
+        public bool EnableSsl { get; set; } = true;
         #endregion
     }
 }
