@@ -5,15 +5,14 @@
 		<TargetFramework>net8.0</TargetFramework>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+	</ItemGroup>
+
 	<ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<ProjectReference Include="$(berger-open-source)\Berger.Extensions.Abstractions\src\Berger.Extensions.Abstractions\Berger.Extensions.Abstractions.csproj" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<PackageReference Include="Berger.Extensions.Abstractions" Version="1.0.0.7" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
 	</ItemGroup>
 </Project>
