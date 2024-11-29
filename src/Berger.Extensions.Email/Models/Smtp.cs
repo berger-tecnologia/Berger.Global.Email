@@ -26,10 +26,10 @@
         #endregion
 
         #region Properties
-        public string User { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
-        public string Alias { get; set; } = string.Empty;
-        public string Host { get; set; } = string.Empty;
+        public string User { get; set; }
+        public string Password { get; set; }
+        public string Alias { get; set; }
+        public string Host { get; set; }
         public int Port { get; set; }
         public bool EnableSsl { get; set; } = true;
         #endregion
